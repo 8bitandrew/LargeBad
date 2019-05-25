@@ -54,6 +54,7 @@ namespace LargeBad.Controllers
                 db.Users.Add(user);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
+
             }
 
             return View(user);
