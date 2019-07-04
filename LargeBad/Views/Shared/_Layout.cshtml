@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - The Large Bad</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/large-bad-style.css">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -20,28 +21,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Downloads", "Downloads", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    @*<li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>*@<li>@Html.ActionLink("SignUp", "Create", "Users")</li>
+                    @*<li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>*@
+                    <li>@Html.ActionLink("SignUp", "Create", "Users")</li>
                     <li>@Html.ActionLink("Login", "Login", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="jumbotron" style="background-image: url(https://ak5.picdn.net/shutterstock/videos/5858615/thumb/1.jpg); background-size: cover;">
-        <div style="text-align:center;">
-            <h1>@ViewData["Title"]</h1>
-        </div>
-    </div>
-    <div class="container body-content">
+
+    <div class="main-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Andrew & Eric</p>
-        </footer>
+    </div>
+
+    <div class="bg-4 text-center navbar" style="padding-top: 25px;
+    padding-bottom: 25px; margin: 0px; font-size: 16px;">
+        &copy; @DateTime.Now.Year - Andrew & Eric
     </div>
 
     @Scripts.Render("~/bundles/jquery")

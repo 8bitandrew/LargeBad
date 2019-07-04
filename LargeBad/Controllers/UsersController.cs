@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LargeBad.Models;
+using System.Text.RegularExpressions;
 
 namespace LargeBad.Controllers
 {
@@ -49,8 +50,14 @@ namespace LargeBad.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "Id,Username,Password,Email,FirstName,LastName")] User user)
         {
+            Regex specialChars = new Regex("^[a-zA-Z0-9 ]*$");
             if (ModelState.IsValid)
             {
+                if (user.Username == null ||
+                    !specialChars.IsMatch(user.Username))
+                {
+                    return null;
+                }
                 db.Users.Add(user);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
