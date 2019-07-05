@@ -1,8 +1,9 @@
 ﻿hr {
-    height: 1px;
+    height: 2px;
     color: black;
     background-color: black;
     border: none;
+    width: 450px;
 }
 
 .navbar {
@@ -15,7 +16,18 @@
     letter-spacing: 5px;
 }
 
+.navbar-brand,
+.navbar-nav li > a {
+    text-transform: capitalize;
+    color: #333;
+    transition: background-color .2s, color .2s;
+}
+
 .navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.navbar-nav li a:active {
     color: #1abc9c !important;
 }
 
@@ -50,7 +62,7 @@ body {
 }
 
 .large-center-post {
-    padding-top: 175px;
+    padding-top: 300px;
     padding-bottom: 175px;
 }
 
