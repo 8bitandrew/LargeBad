@@ -29,7 +29,7 @@
                     @*<li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>*@
 
                     @*<li>@Html.ActionLink("SignUp", "Create", "Users")</li>
-        <li>@Html.ActionLink("Login", "Login", "Home")</li>*@
+                        <li>@Html.ActionLink("Login", "Login", "Home")</li>*@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Hello " + User.Identity.Name, "UserProfile", "Home")</li>
@@ -44,8 +44,8 @@
             </div>
         </div>
     </div>
-
-    <div class="main-content">
+    <canvas id="lamp-anim" class="lamp-anim" height="887" width="1920" style="position: absolute"></canvas>
+    <div class="main-content" style="position: relative">
         @RenderBody()
     </div>
 
@@ -57,6 +57,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/App/view-layout-script.js")
+    @Scripts.Render("~/Scripts/App/lava-lamp-effect.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

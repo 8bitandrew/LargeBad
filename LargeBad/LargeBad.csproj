@@ -215,6 +215,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\App\lava-lamp-effect.js" />
     <Content Include="Scripts\App\view-create-signup.js" />
     <Content Include="Scripts\App\view-layout-script.js" />
     <Content Include="Scripts\bootstrap.js" />

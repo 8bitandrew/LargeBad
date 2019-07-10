@@ -20,16 +20,22 @@
 .navbar-nav li > a {
     text-transform: capitalize;
     color: #333;
-    transition: background-color .2s, color .2s;
+    transition: background-color .5s, color .5s;
 }
 
-.navbar-nav li a:hover {
-    color: #1abc9c !important;
+.m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
 }
 
-.navbar-nav li a:active {
+/*.navbar-nav li a:hover {
     color: #1abc9c !important;
-}
+}*/
+
+/*.navbar-nav li a:active {
+    color: #1abc9c !important;
+}*/
 
 body {
     font: 20px Montserrat, sans-serif;
@@ -37,7 +43,6 @@ body {
 }
 
 .bg-1 {
-    background-color: #1abc9c; /* Green */
     color: #ffffff;
 }
 
@@ -57,13 +62,17 @@ body {
 }
 
 .small-center-post {
+    position: relative;
     padding-top: 75px;
     padding-bottom: 75px;
+    text-align: center;
 }
 
 .large-center-post {
+    position: relative;
     padding-top: 300px;
     padding-bottom: 175px;
+    text-align: center;
 }
 
 .main-content {
