@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" type="text/css" href="~/Content/large-bad-style.css">
 </head>
-<body>
+<body class="disable-select">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -44,8 +44,9 @@
             </div>
         </div>
     </div>
-    <canvas id="lamp-anim" class="lamp-anim" height="887" width="1920" style="position: absolute"></canvas>
+    
     <div class="main-content" style="position: relative">
+        <canvas id="lamp-anim" style="position: absolute; width: 100%; height: 100%;"></canvas>
         @RenderBody()
     </div>
 
