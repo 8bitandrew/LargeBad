@@ -49,7 +49,7 @@ namespace LargeBad
                 PostLogoutRedirectUri = auth0PostLogoutRedirectUri,
 
                 ResponseType = OpenIdConnectResponseType.CodeIdToken,
-                Scope = "openid profile",
+                Scope = "openid profile email",
 
                 TokenValidationParameters = new TokenValidationParameters
                 {
