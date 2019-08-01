@@ -24,7 +24,12 @@
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Downloads", "Downloads", "Home")</li>
-                </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Apps", null, null, new { onclick = "javascript:return false;" })</li>
+                        <li>@Html.ActionLink("Forum", null, null, new { onclick = "javascript:return false;" })</li>
+                    }
+                    </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @*<li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>*@
 

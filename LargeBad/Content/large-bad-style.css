@@ -32,15 +32,20 @@
 .disable-select {
     user-select: none; /* supported by Chrome and Opera */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#slide-slowest {
+    position: relative;
+    left: -100px;
+    animation: slide 3s forwards;
 }
 
 #slide-slow {
     position: relative;
     left: -100px;
-    animation: slide 3s forwards;
+    animation: slide 1.5s forwards;
 }
 
 #slide-fast {
