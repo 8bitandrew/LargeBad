@@ -48,6 +48,19 @@ namespace LargeBad.Controllers
         }
 
         [Authorize]
+        public ActionResult Tokens()
+        {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+
+            // Extract tokens
+            string accessToken = claimsIdentity?.FindFirst(c => c.Type == "access_token")?.Value;
+            string idToken = claimsIdentity?.FindFirst(c => c.Type == "id_token")?.Value;
+
+            // Now you can use the tokens as appropriate...
+            return View();
+        }
+
+        [Authorize]
         public ActionResult Claims()
         {
             return View();
@@ -63,7 +76,8 @@ namespace LargeBad.Controllers
                 Name = claimsIdentity?.FindFirst(c => c.Type == claimsIdentity.NameClaimType)?.Value,
                 EmailAddress = claimsIdentity?.FindFirst(c => c.Type == ClaimTypes.Email)?.Value,
                 ProfileImage = claimsIdentity?.FindFirst(c => c.Type == "picture")?.Value,
-                Username = claimsIdentity?.FindFirst(c => c.Type == "username")?.Value
+                Username = claimsIdentity?.FindFirst(c => c.Type == "username")?.Value,
+                Nickname = claimsIdentity?.FindFirst(c => c.Type == "nickname")?.Value
             });
         }
 

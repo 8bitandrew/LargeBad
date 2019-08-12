@@ -34,10 +34,10 @@
                     @*<li>@Html.ActionLink("SignUp", "SignUp", "Home")</li>*@
 
                     @*<li>@Html.ActionLink("SignUp", "Create", "Users")</li>
-                        <li>@Html.ActionLink("Login", "Login", "Home")</li>*@
+        <li>@Html.ActionLink("Login", "Login", "Home")</li>*@
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Hello " + User.Identity.Name, "UserProfile", "Home")</li>
+                        <li>@Html.ActionLink("Profile", "UserProfile", "Home")</li>
                         <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                     }
                     else
