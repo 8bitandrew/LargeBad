@@ -3,19 +3,13 @@
     ViewData["Title"] = "User Profile";
 }
 
-<div class="large-center-post bg-1 text-center">
+<div class="large-center-post bg-1" id="slide-fast" style="display: none;">
     <div class="col-md-12">
-            <h2>@ViewData["Title"]</h2>
-
-            <div class="col-md-2">
-                <img src="@Model.ProfileImage"
-                     alt="" class="img-rounded img-responsive" />
-            </div>
-            <div class="col-md-4">
-                <h3>@Model.Username</h3>
-                <p>
-                    <i class="glyphicon glyphicon-envelope"></i> @Model.EmailAddress @Model.Nickname
-                </p>
-            </div>
+        <h1 style="font-size: 75px">@ViewData["Title"]</h1>
+        <hr />
+        <br />
+        <h2>Username: @Model.Nickname</h2>
+        <br />
+        <h2>Email: @Model.EmailAddress</h2>
     </div>
 </div>
