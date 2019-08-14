@@ -49,6 +49,12 @@ hr {
     animation: slide 1.5s forwards;
 }
 
+#slide-slower {
+    position: relative;
+    left: -100px;
+    animation: slide 2s forwards;
+}
+
 #slide-fast {
     position: relative;
     left: -100px;

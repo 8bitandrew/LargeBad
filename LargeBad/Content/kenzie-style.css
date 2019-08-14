@@ -1,0 +1,23 @@
+﻿#step-3 {
+    position: relative;
+    left: -100px;
+    animation: slide 3s forwards;
+}
+
+#step-2 {
+    position: relative;
+    left: -100px;
+    animation: slide 1.5s forwards;
+}
+
+#step-1 {
+    position: relative;
+    left: -100px;
+    animation: slide 1s forwards;
+}
+
+@keyframes slide {
+    100% {
+        left: 0;
+    }
+}
