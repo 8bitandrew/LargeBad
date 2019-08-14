@@ -71,10 +71,10 @@
 body {
     font: 20px Montserrat, sans-serif;
     background-color: #1abc9c !important;
+    text-shadow: 2px 2px #000000;
 }
 
 .bg-1 {
-    text-shadow: 2px 2px #000000;
     color: #ffffff;
 }
 

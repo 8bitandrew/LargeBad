@@ -90,5 +90,10 @@ namespace LargeBad.Controllers
         {
             return View();
         }
+
+        public ActionResult Kenzie()
+        {
+            return View();
+        }
     }
 }
